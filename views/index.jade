@@ -1,23 +1,22 @@
 extends layout
 
+mixin menu(list, className)
+  ul(class=className)&attributes(attributes)
+    each val in list
+      li: a(href="#")= val
+
 block content
-  div(class="wrap-app")
-    div(class="wrap-header")
-      header(class="header")
-        div(class="header-left")
-          div(class="logo")
-            a(class="logo-link", href="/")
-              img(class="logo-img", src="/images/ui/logo.png")
-          div(class="bread-crumbs")
-            ul(class="list")
-              li
-                a(href="#") Верска
-              li
-                a(href="#") HTML
-              li
-                a(href="#") С чего стоит начать изучение HTML?
-        div(class="header-right")
-          div(class="search-button")
-          div(class="login-button")
-      div(class="load-bar")
-        div(class="progress-line")
+  .wrap-app
+    .wrap-header
+      header.header
+        .header-left
+          .logo
+            a.logo-link(href="/")
+              img.logo-img(src="/images/ui/logo.png")
+          .bread-crumbs
+            +menu(breadCrumbs, 'list')
+        .header-right
+          .search-button
+          .login-button
+      .load-bar
+        .progress-line

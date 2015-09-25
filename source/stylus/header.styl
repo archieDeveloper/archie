@@ -1,27 +1,52 @@
+header-height = 100px
+load-bar-height = 3px
+logo-height = 34px
+
 .wrap-header
   background-color #fff
   .header
     padding 0 50px
-    height 100px
+    height header-height
     .header-left
       float left
       .logo
         float left
+        height header-height
+        margin-right 28px
         .logo-link
+          margin-top (header-height / 2) - (logo-height / 2)
           display block
-          float left
+          .logo-img
+            display block
       .bread-crumbs
         float left
+        line-height header-height
         .list
           list-style-type none
+          margin 0
+          padding 0
           li
             float left
+            position relative
+            margin-right 7px
+            &::before
+              content "\f101"
+              margin-right 7px
+              color color-dark-blue
+              font-family font-icons
+            a
+              color color-base
+              text-decoration none
+              font-family font-istok
+              font-size 16px
+              &:hover
+                color lighten(@color, 10%)
     .header-right
       float right
   .load-bar
-    height 3px
+    height load-bar-height
     background-color color-gray
     .progress-line
-      height 3px
+      height load-bar-height
       background-color color-base
       width 0
