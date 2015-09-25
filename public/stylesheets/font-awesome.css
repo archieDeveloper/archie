@@ -20,6 +20,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 /* makes the font 33% larger relative to the icon container */
+.fa.margin-right {
+    margin-right: 9px;
+}
+.fa.margin-left {
+    margin-left: 9px;
+}
 .fa-lg {
   font-size: 1.33333333em;
   line-height: 0.75em;

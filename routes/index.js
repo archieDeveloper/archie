@@ -9,7 +9,8 @@ router.get('/', function(req, res, next) {
           'Программирование',
           'PHP',
           'Паттерны проектирования'
-      ]
+      ],
+      authorized: true
   });
 });
 
