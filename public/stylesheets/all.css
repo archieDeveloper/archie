@@ -49,14 +49,15 @@ a {
   position: absolute;
   left: 0;
   top: 0;
-  bottom: 100%;
-  right: 0;
+  height: 100px;
+  width: 100%;
   z-index: 2;
   overflow: hidden;
-  -webkit-transition: all 0.1s ease-out;
-  -moz-transition: all 0.1s ease-out;
-  -o-transition: all 0.1s ease-out;
-  transition: all 0.1s ease-out;
+  display: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 }
 .wrap-header .search-form .search-input {
   background-color: transparent;
@@ -80,6 +81,7 @@ a {
   text-decoration: none;
   color: #004055;
   padding: 0 50px;
+  outline: none;
 }
 .wrap-header .header {
   padding: 0 50px;
@@ -178,6 +180,7 @@ a {
   line-height: 100px;
   float: left;
   margin-right: 19px;
+  position: relative;
 }
 .wrap-header .header .header-right .profile-button .profile-link {
   background-color: #0ccc7a;
@@ -188,9 +191,50 @@ a {
   display: inline-block;
   border-radius: 35px;
   text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .wrap-header .header .header-right .profile-button .profile-link:hover {
   background-color: #0dda82;
+}
+.wrap-header .header .header-right .profile-button .profile-menu {
+  position: absolute;
+  line-height: 30px;
+  top: 50px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  right: 0;
+  border: 2px solid #e7e7e7;
+  display: none;
+}
+.wrap-header .header .header-right .profile-button .profile-menu li a {
+  color: #004055;
+  font-size: 14px;
+  text-decoration: none;
+  display: block;
+  padding: 1px 40px;
+  border-bottom: 2px solid #e7e7e7;
+  text-align: center;
+}
+.wrap-header .header .header-right .profile-button .profile-menu li a:hover {
+  background-color: #e7e7e7;
+}
+.wrap-header .header .header-right .profile-button .profile-menu::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 8px solid rgba(0,0,0,0);
+  border-right: 8px solid rgba(0,0,0,0);
+  border-bottom: 8px solid #e7e7e7;
+  top: -9px;
+  right: 20px;
 }
 .wrap-header .load-bar {
   height: 3px;

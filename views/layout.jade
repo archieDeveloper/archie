@@ -7,5 +7,5 @@ html
     link(rel='stylesheet', href='/stylesheets/font-awesome.css')
   body
     block content
-    script(src="/javascripts/libs/jquery-2.1.4.min.js")
-    script(src="/javascripts/all.min.js")
+    each val in includeJs
+      script(src="/javascripts/" + val + ".js")

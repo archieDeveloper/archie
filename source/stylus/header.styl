@@ -10,11 +10,12 @@ logo-height = 34px
     position absolute
     left 0
     top 0
-    bottom 100%
-    right 0
+    height header-height
+    width 100%
     z-index 2
     overflow hidden
-    transition(0.1s)
+    display none
+    transition(0.3s)
     .search-input
       background-color transparent
       height header-height
@@ -36,6 +37,7 @@ logo-height = 34px
       text-decoration none
       color color-dark-blue
       padding 0 50px
+      outline none
   .header
     padding 0 50px
     height header-height
@@ -115,6 +117,7 @@ logo-height = 34px
         line-height header-height
         float left
         margin-right 19px
+        position relative
         .profile-link
           background-color color-base
           color white
@@ -124,8 +127,43 @@ logo-height = 34px
           display inline-block
           border-radius 35px
           text-decoration none
+          cursor pointer
+          position relative
+          user-select-none()
           &:hover
             background-color lighten(@background-color, 5%)
+        .profile-menu
+          position absolute
+          line-height 30px
+          top 50px
+          list-style-type none
+          margin 0
+          padding 0
+          background-color white
+          right 0
+          border 2px solid color-gray
+          display none
+          li
+            a
+              color color-dark-blue
+              font-size 14px
+              text-decoration none
+              display block
+              padding 1px 40px
+              border-bottom 2px solid color-gray
+              text-align center
+              &:hover
+                background-color color-gray
+          &::before
+            content ''
+            position absolute
+            width 0
+            height 0
+            border-left 8px solid rgba(0, 0, 0, 0)
+            border-right 8px solid rgba(0, 0, 0, 0)
+            border-bottom 8px solid color-gray
+            top -9px
+            right 20px
   .load-bar
     height load-bar-height
     background-color color-gray

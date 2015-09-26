@@ -1,0 +1,28 @@
+.wrap-header
+  .search-form#search-form
+    input.search-input#search-input(name='search-query', type='text', placeholder="Поиск...")
+    a.search-link-close#search-link-close.fa.fa-remove.fa-3x(href='#')
+  header.header
+    .header-left
+      .logo
+        a.logo-link(href="/")
+          img.logo-img(src="/images/ui/logo.png")
+      .bread-crumbs
+        +menu(breadCrumbs, 'list')
+    .header-right
+      if authorized
+        .profile-button
+          span.profile-link#profile-link
+            i.fa.fa-user.margin-right
+            | archie
+            i.fa.fa-angle-down.margin-left
+            +menu(['Профиль', 'Настройки', 'Выход'], 'profile-menu')
+      else
+        .login-button
+          a.login-link(href='#')
+            i.fa.fa-user.margin-right
+            | Войти
+      .search-button
+        a.search-link#search-link(href='#'): i.fa.fa-search
+  .load-bar
+    .progress-line
