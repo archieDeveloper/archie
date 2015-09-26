@@ -1,7 +1,8 @@
 (function() {
   $(window).load(function() {
-    return $('.previews').mCustomScrollbar({
-      theme: 'dark'
+    return $('.wrap-right-aside').mCustomScrollbar({
+      theme: 'minimal-dark',
+      scrollInertia: 100
     });
   });
 
