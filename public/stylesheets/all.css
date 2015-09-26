@@ -40,9 +40,54 @@ a {
   font-style: normal;
   font-weight: normal;
 }
+@font-face {
+  font-family: "MerriweatherRegular";
+  src: url("../fonts/MerriweatherRegular/MerriweatherRegular.eot");
+  src: url("../fonts/MerriweatherRegular/MerriweatherRegular.eot?#iefix") format("embedded-opentype"), url("../fonts/MerriweatherRegular/MerriweatherRegular.woff") format("woff"), url("../fonts/MerriweatherRegular/MerriweatherRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MerriweatherBold";
+  src: url("../fonts/MerriweatherBold/MerriweatherBold.eot");
+  src: url("../fonts/MerriweatherBold/MerriweatherBold.eot?#iefix") format("embedded-opentype"), url("../fonts/MerriweatherBold/MerriweatherBold.woff") format("woff"), url("../fonts/MerriweatherBold/MerriweatherBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MerriweatherItalic";
+  src: url("../fonts/MerriweatherItalic/MerriweatherItalic.eot");
+  src: url("../fonts/MerriweatherItalic/MerriweatherItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/MerriweatherItalic/MerriweatherItalic.woff") format("woff"), url("../fonts/MerriweatherItalic/MerriweatherItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MerriweatherLight";
+  src: url("../fonts/MerriweatherLight/MerriweatherLight.eot");
+  src: url("../fonts/MerriweatherLight/MerriweatherLight.eot?#iefix") format("embedded-opentype"), url("../fonts/MerriweatherLight/MerriweatherLight.woff") format("woff"), url("../fonts/MerriweatherLight/MerriweatherLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MerriweatherBoldItalic";
+  src: url("../fonts/MerriweatherBoldItalic/MerriweatherBoldItalic.eot");
+  src: url("../fonts/MerriweatherBoldItalic/MerriweatherBoldItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/MerriweatherBoldItalic/MerriweatherBoldItalic.woff") format("woff"), url("../fonts/MerriweatherBoldItalic/MerriweatherBoldItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "MerriweatherLightItalic";
+  src: url("../fonts/MerriweatherLightItalic/MerriweatherLightItalic.eot");
+  src: url("../fonts/MerriweatherLightItalic/MerriweatherLightItalic.eot?#iefix") format("embedded-opentype"), url("../fonts/MerriweatherLightItalic/MerriweatherLightItalic.woff") format("woff"), url("../fonts/MerriweatherLightItalic/MerriweatherLightItalic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 .wrap-header {
   background-color: #fff;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .wrap-header .search-form {
   background-color: #f2f2f2;
@@ -244,4 +289,125 @@ a {
   height: 3px;
   background-color: #0ccc7a;
   width: 0;
+}
+.wrap-aside {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 103px;
+}
+.wrap-aside .wrap-left-aside {
+  background-color: #e7e7e7;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-right: 3px solid #f3f3f3;
+  width: 220px;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.wrap-aside .wrap-left-aside .left-aside {
+  list-style-type: none;
+  margin: 20px 0 0 0;
+  padding: 0;
+}
+.wrap-aside .wrap-left-aside .left-aside li a {
+  color: #004055;
+  text-decoration: none;
+  display: block;
+  padding: 15px 30px;
+  border-right: 3px solid #f3f3f3;
+  margin-right: -3px;
+}
+.wrap-aside .wrap-left-aside .left-aside li a:hover {
+  border-color: #0ccc7a;
+  background-color: #f2f2f2;
+}
+.wrap-aside .wrap-left-aside .left-aside li a::after {
+  content: '\f105';
+  font-family: "FontAwesome";
+  margin-left: 6px;
+}
+.wrap-aside .wrap-left-aside .copyright {
+  color: #8899a0;
+  font-size: 12px;
+  padding: 20px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  line-height: 30px;
+}
+.wrap-aside .wrap-right-aside {
+  position: absolute;
+  background-color: #e7e7e7;
+  top: 0;
+  left: 223px;
+  bottom: 0;
+  z-index: 5;
+}
+.wrap-aside .wrap-right-aside .right-aside {
+  list-style-type: none;
+  margin: 0;
+  padding: 20px 0;
+  background-color: #f2f2f2;
+}
+.wrap-aside .wrap-right-aside .right-aside li a {
+  color: #004055;
+  text-decoration: none;
+  display: block;
+  padding: 15px 30px;
+}
+.wrap-aside .wrap-right-aside .right-aside li a:hover {
+  background-color: #e7e7e7;
+}
+.wrap-aside .wrap-right-aside .previews {
+  overflow: hidden;
+}
+.wrap-aside .wrap-right-aside .previews .preview {
+  width: 280px;
+  padding: 50px 30px 0 30px;
+}
+.wrap-aside .wrap-right-aside .previews .preview .head-block {
+  text-transform: uppercase;
+  font-family: "IstokWebBold";
+  color: #004055;
+  margin-bottom: 30px;
+}
+.wrap-aside .wrap-right-aside .previews .preview .block .content {
+  font-size: 14px;
+  color: #004055;
+}
+.wrap-aside .wrap-right-aside .previews .preview .block .info {
+  list-style-type: none;
+  color: #004055;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  overflow: hidden;
+}
+.wrap-aside .wrap-right-aside .previews .preview .block .info li {
+  float: left;
+  margin-right: 20px;
+}
+.wrap-aside .wrap-right-aside .previews .preview .block .info li a {
+  color: #0ccc7a;
+}
+.wrap-aside .wrap-right-aside .previews .preview .block .head {
+  font-family: "MerriweatherBold";
+  font-weight: normal;
+  font-size: 16px;
+  color: #004055;
+  border-left: 3px solid #0ccc7a;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
+.wrap-aside .wrap-right-aside .previews .preview .block .time {
+  font-family: "MerriweatherBold";
+  color: #8899a0;
+  font-size: 12px;
+  margin-bottom: 20px;
 }

@@ -1,5 +1,9 @@
 (function() {
-
+  $(window).load(function() {
+    return $('.previews').mCustomScrollbar({
+      theme: 'dark'
+    });
+  });
 
 }).call(this);
 
