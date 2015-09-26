@@ -1,0 +1,103 @@
+.wrap-aside
+  position fixed
+  left 0
+  bottom 0
+  top header-height + load-bar-height
+  .wrap-left-aside
+    background-color color-gray
+    position absolute
+    left 0
+    top 0
+    bottom 0
+    border-right 3px solid lighten(color-light-gray, 10%)
+    width 220px
+    transition(1s)
+    .left-aside
+      list-style-type none
+      margin 20px 0 0 0
+      padding 0
+      li
+        a
+          color color-dark-blue
+          text-decoration none
+          display block
+          padding 15px 30px
+          border-right 3px solid lighten(color-light-gray, 10%)
+          margin-right -3px
+          &:hover
+            border-color color-base
+            background-color color-light-gray
+          &::after
+            content '\f105'
+            font-family font-icons
+            margin-left 6px
+    .copyright
+      color color-dark-gray
+      font-size 12px
+      padding 20px 20px
+      position absolute
+      bottom 0
+      left 0
+      line-height 30px
+  .wrap-right-aside
+    position absolute
+    background-color color-gray
+    top 0
+    left 223px
+    bottom 0
+    z-index 5
+    .mCSB_inside>.mCSB_container
+      margin-right 0 !important
+    .right-aside
+      list-style-type none
+      margin 0
+      padding 20px 0
+      background-color color-light-gray
+      li
+        a
+          color color-dark-blue
+          text-decoration none
+          display block
+          padding 15px 30px
+          &:hover
+            background-color color-gray
+    .previews
+      padding-bottom 50px
+      .preview
+        width 280px
+        padding 50px 30px 0 30px
+        .head-block
+          text-transform uppercase
+          font-family font-istok-bold
+          color color-dark-blue
+          margin-bottom 30px
+        .block
+          .content
+            font-size 14px
+            color color-dark-blue
+          .info
+            list-style-type none
+            color color-dark-blue
+            margin 0
+            padding 0
+            font-size 13px
+            overflow hidden
+            li
+              float left
+              margin-right 20px
+              a
+                color color-base
+          .head
+            font-family font-merriweather-bold
+            font-weight normal
+            font-size 16px
+            color color-dark-blue
+            border-left 3px solid color-base
+            padding-left 10px
+            margin-bottom 10px
+            text-decoration none
+          .time
+            font-family font-merriweather-bold
+            color color-dark-gray
+            font-size 12px
+            margin-bottom 20px

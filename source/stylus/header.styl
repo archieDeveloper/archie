@@ -1,0 +1,176 @@
+header-height = 100px
+load-bar-height = 3px
+logo-height = 34px
+
+.wrap-header
+  background-color #fff
+  position fixed
+  top 0
+  left 0
+  right 0
+  .search-form
+    background-color color-light-gray
+    position absolute
+    left 0
+    top 0
+    height header-height
+    width 100%
+    z-index 2
+    overflow hidden
+    display none
+    transition(0.3s)
+    .search-input
+      background-color transparent
+      height header-height
+      font-size 30px
+      color color-dark-blue
+      border 0
+      outline none
+      width 100%
+      padding 0 50px;
+      box-sizing border-box
+      font-family font-istok
+    .search-link-close
+      display block
+      line-height header-height
+      position absolute
+      right 0
+      top 0
+      text-align center
+      text-decoration none
+      color color-dark-blue
+      padding 0 50px
+      outline none
+  .header
+    padding 0 50px
+    height header-height
+    .header-left
+      float left
+      .logo
+        float left
+        height header-height
+        margin-right 28px
+        .logo-link
+          margin-top (header-height / 2) - (logo-height / 2)
+          display block
+          .logo-img
+            display block
+      .bread-crumbs
+        float left
+        line-height header-height
+        .list
+          list-style-type none
+          margin 0
+          padding 0
+          li
+            float left
+            position relative
+            margin-right 7px
+            &::before
+              content "\f101"
+              margin-right 7px
+              color color-dark-blue
+              font-family font-icons
+            a
+              color color-base
+              text-decoration none
+              font-family font-istok
+              font-size 16px
+              &:hover
+                color lighten(@color, 10%)
+    .header-right
+      float right
+      .search-button
+        height header-height
+        line-height header-height
+        float left
+        .search-link
+          height 35px
+          width 35px
+          border-radius 35px
+          background-color color-gray
+          display inline-block
+          line-height 35px
+          text-align center
+          color color-dark-blue
+          &:hover
+            background-color lighten(@background-color, 30%)
+            height 40px
+            line-height 40px
+            width 40px
+            margin 0 -2.5px
+      .login-button
+        height header-height
+        line-height header-height
+        float left
+        margin-right 19px
+        .login-link
+          background-color color-base
+          color white
+          height 35px
+          line-height 35px
+          padding 0 26px
+          display inline-block
+          border-radius 35px
+          text-decoration none
+          &:hover
+            background-color lighten(@background-color, 5%)
+      .profile-button
+        height header-height
+        line-height header-height
+        float left
+        margin-right 19px
+        position relative
+        .profile-link
+          background-color color-base
+          color white
+          height 35px
+          line-height 35px
+          padding 0 26px
+          display inline-block
+          border-radius 35px
+          text-decoration none
+          cursor pointer
+          position relative
+          user-select-none()
+          &:hover
+            background-color lighten(@background-color, 5%)
+        .profile-menu
+          position absolute
+          line-height 30px
+          top 50px
+          list-style-type none
+          margin 0
+          padding 0
+          background-color white
+          right 0
+          border 2px solid color-gray
+          display none
+          li
+            a
+              color color-dark-blue
+              font-size 14px
+              text-decoration none
+              display block
+              padding 1px 40px
+              border-bottom 2px solid color-gray
+              text-align center
+              &:hover
+                background-color color-gray
+          &::before
+            content ''
+            position absolute
+            width 0
+            height 0
+            border-left 8px solid rgba(0, 0, 0, 0)
+            border-right 8px solid rgba(0, 0, 0, 0)
+            border-bottom 8px solid color-gray
+            top -9px
+            right 20px
+  .load-bar
+    height load-bar-height
+    background-color color-gray
+    .progress-line
+      height load-bar-height
+      background-color color-base
+      width 0

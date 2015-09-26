@@ -1,7 +1,12 @@
 doctype html
 html
   head
+    meta(charset="utf-8")
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/all.min.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.css')
+    link(rel='stylesheet', href='/stylesheets/jquery.mCustomScrollbar.min.css')
   body
     block content
+    each val in includeJs
+      script(src="/javascripts/" + val + ".js")
