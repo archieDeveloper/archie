@@ -1,0 +1,4 @@
+mixin menu(list, className)
+  ul(class=className)&attributes(attributes)
+    each val in list
+      li: a(href="#")= val

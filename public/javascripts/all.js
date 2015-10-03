@@ -1,4 +1,31 @@
 (function() {
+  'use strict';
+  $(document).ready(function() {
+    var $aside, $buttonAside;
+    $buttonAside = $('.wrap-button-aside').children('a');
+    $aside = $('.wrap-aside');
+    console.log($aside);
+    return $buttonAside.on('click', function(e) {
+      var $this;
+      e.preventDefault();
+      $this = $(this);
+      if ($this.hasClass('fa-circle-o')) {
+        $this.removeClass('fa-circle-o').addClass('fa-remove');
+        return $aside.css({
+          left: 0
+        });
+      } else {
+        $this.removeClass('fa-remove').addClass('fa-circle-o');
+        return $aside.css({
+          left: -$aside.width()
+        });
+      }
+    });
+  });
+
+}).call(this);
+
+(function() {
   $(window).load(function() {
     return $('.wrap-right-aside').mCustomScrollbar({
       theme: 'minimal-dark',

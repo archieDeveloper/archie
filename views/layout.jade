@@ -3,10 +3,13 @@ html
   head
     meta(charset="utf-8")
     title= title
-    link(rel='stylesheet', href='/stylesheets/all.min.css')
-    link(rel='stylesheet', href='/stylesheets/font-awesome.css')
-    link(rel='stylesheet', href='/stylesheets/jquery.mCustomScrollbar.min.css')
+    each val in includeCss
+      link(rel='stylesheet', href="/stylesheets/" + val + ".css")
   body
-    block content
+    .wrap-app
+      include ./templates/mixins.jade
+      include ./templates/header/index.jade
+      include ./templates/aside/index.jade
+      block content
     each val in includeJs
       script(src="/javascripts/" + val + ".js")

@@ -1,16 +1,22 @@
+left-aside-width = 220px
+left-aside-border-width = 3px
+right-aside-width = 340px
+aside-width = (left-aside-width) + (left-aside-border-width) + (right-aside-width)
 .wrap-aside
   position fixed
-  left 0
+  left -(aside-width)
   bottom 0
   top header-height + load-bar-height
+  width aside-width
+  transition(.2s)
   .wrap-left-aside
     background-color color-gray
     position absolute
     left 0
     top 0
     bottom 0
-    border-right 3px solid lighten(color-light-gray, 10%)
-    width 220px
+    border-right left-aside-border-width solid lighten(color-light-gray, 10%)
+    width left-aside-width
     transition(1s)
     .left-aside
       list-style-type none
@@ -22,8 +28,8 @@
           text-decoration none
           display block
           padding 15px 30px
-          border-right 3px solid lighten(color-light-gray, 10%)
-          margin-right -3px
+          border-right left-aside-border-width solid lighten(color-light-gray, 10%)
+          margin-right -(left-aside-border-width)
           &:hover
             border-color color-base
             background-color color-light-gray
@@ -43,9 +49,10 @@
     position absolute
     background-color color-gray
     top 0
-    left 223px
+    left (left-aside-width) + (left-aside-border-width)
     bottom 0
     z-index 5
+    width right-aside-width
     .mCSB_inside>.mCSB_container
       margin-right 0 !important
     .right-aside
@@ -64,7 +71,6 @@
     .previews
       padding-bottom 50px
       .preview
-        width 280px
         padding 50px 30px 0 30px
         .head-block
           text-transform uppercase
@@ -101,3 +107,13 @@
             color color-dark-gray
             font-size 12px
             margin-bottom 20px
+  .wrap-button-aside
+    position absolute
+    left (aside-width) + 30px
+    top 30px
+    a
+      color color-dark-gray
+      text-decoration none
+      outline none
+      &:hover
+        color color-dark-blue

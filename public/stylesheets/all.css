@@ -7,10 +7,7 @@ a {
   -webkit-transition: all 0.1s ease-out;
   -moz-transition: all 0.1s ease-out;
   -o-transition: all 0.1s ease-out;
-  -webkit-transition: all all ease-out;
-  -moz-transition: all all ease-out;
-  -o-transition: all all ease-out;
-  transition: all all ease-out;
+  transition: all 0.1s ease-out;
 }
 @font-face {
   font-family: "IstokWebRegular";
@@ -242,6 +239,10 @@ a {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-transition: all 0.1s ease-out;
+  -moz-transition: all 0.1s ease-out;
+  -o-transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out;
 }
 .wrap-header .header .header-right .profile-button .profile-link:hover {
   background-color: #0dda82;
@@ -255,7 +256,7 @@ a {
   padding: 0;
   background-color: #fff;
   right: 0;
-  border: 2px solid #e7e7e7;
+  border: 3px solid #e7e7e7;
   display: none;
 }
 .wrap-header .header .header-right .profile-button .profile-menu li a {
@@ -264,7 +265,7 @@ a {
   text-decoration: none;
   display: block;
   padding: 1px 40px;
-  border-bottom: 2px solid #e7e7e7;
+  border-bottom: 3px solid #e7e7e7;
   text-align: center;
 }
 .wrap-header .header .header-right .profile-button .profile-menu li a:hover {
@@ -292,9 +293,14 @@ a {
 }
 .wrap-aside {
   position: fixed;
-  left: 0;
+  left: -563px;
   bottom: 0;
   top: 103px;
+  width: 563px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .wrap-aside .wrap-left-aside {
   background-color: #e7e7e7;
@@ -347,6 +353,7 @@ a {
   left: 223px;
   bottom: 0;
   z-index: 5;
+  width: 340px;
 }
 .wrap-aside .wrap-right-aside .mCSB_inside>.mCSB_container {
   margin-right: 0 !important;
@@ -370,7 +377,6 @@ a {
   padding-bottom: 50px;
 }
 .wrap-aside .wrap-right-aside .previews .preview {
-  width: 280px;
   padding: 50px 30px 0 30px;
 }
 .wrap-aside .wrap-right-aside .previews .preview .head-block {
@@ -413,4 +419,17 @@ a {
   color: #8899a0;
   font-size: 12px;
   margin-bottom: 20px;
+}
+.wrap-aside .wrap-button-aside {
+  position: absolute;
+  left: 593px;
+  top: 30px;
+}
+.wrap-aside .wrap-button-aside a {
+  color: #8899a0;
+  text-decoration: none;
+  outline: none;
+}
+.wrap-aside .wrap-button-aside a:hover {
+  color: #004055;
 }
