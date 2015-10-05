@@ -17,7 +17,6 @@ aside-width = (left-aside-width) + (left-aside-border-width) + (right-aside-widt
     bottom 0
     border-right left-aside-border-width solid lighten(color-light-gray, 10%)
     width left-aside-width
-    transition(1s)
     .left-aside
       list-style-type none
       margin 20px 0 0 0
@@ -37,6 +36,9 @@ aside-width = (left-aside-width) + (left-aside-border-width) + (right-aside-widt
             content '\f105'
             font-family font-icons
             margin-left 6px
+          &.active
+            border-color color-base
+            background-color color-light-gray
     .copyright
       color color-dark-gray
       font-size 12px

@@ -1,10 +1,17 @@
 (function() {
   'use strict';
   $(document).ready(function() {
-    var $aside, $buttonAside;
+    var $aside, $buttonAside, $leftAsideLinks;
     $buttonAside = $('.wrap-button-aside').children('a');
     $aside = $('.wrap-aside');
-    console.log($aside);
+    $leftAsideLinks = $('.left-aside li a');
+    $leftAsideLinks.on('click', function(e) {
+      var $this;
+      e.preventDefault();
+      $this = $(this);
+      $leftAsideLinks.removeClass('active');
+      return $this.addClass('active');
+    });
     return $buttonAside.on('click', function(e) {
       var $this;
       e.preventDefault();

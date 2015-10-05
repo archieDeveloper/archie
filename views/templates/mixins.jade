@@ -1,4 +1,5 @@
-mixin menu(list, className)
+mixin menu(list, className, active)
   ul(class=className)&attributes(attributes)
-    each val in list
-      li: a(href="#")= val
+    each val, index in list
+      li
+        a(href="#", class={active: index === active})= val

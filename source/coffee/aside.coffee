@@ -2,7 +2,13 @@
 $(document).ready ->
   $buttonAside = $('.wrap-button-aside').children('a')
   $aside = $ '.wrap-aside'
-  console.log $aside
+  $leftAsideLinks = $ '.left-aside li a'
+
+  $leftAsideLinks.on 'click', (e)->
+    e.preventDefault()
+    $this = $ this
+    $leftAsideLinks.removeClass 'active'
+    $this.addClass 'active'
   $buttonAside.on 'click', (e)->
     e.preventDefault()
     $this = $ this
