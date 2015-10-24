@@ -1,4 +1,5 @@
-path = require 'path'
+path    = require 'path'
+webpack = require 'webpack'
 
 module.exports =
     entry: './source/coffee/app.coffee'
@@ -11,3 +12,6 @@ module.exports =
         ]
     resolve:
         extensions: ["", ".web.coffee", ".web.js", ".coffee", ".js"]
+    plugins: [
+        new webpack.optimize.UglifyJsPlugin
+    ]

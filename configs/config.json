@@ -5,7 +5,7 @@
       "libs/jquery-ui.min",
       "libs/jQueryRotate",
       "libs/jquery.mCustomScrollbar.concat.min",
-      "all.min"
+      "bundle"
     ],
     "css": [
       "all.min",

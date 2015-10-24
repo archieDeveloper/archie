@@ -42,9 +42,100 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	var ControllerSearchButton;
+
+	ControllerSearchButton = __webpack_require__(1);
+
+	new ControllerSearchButton;
+
+
+/***/ },
+/* 1 */
 /***/ function(module, exports) {
 
-	console.log('hello, world');
+	var Button;
+
+	Button = (function() {
+	  function Button() {
+	    this.element.searchLink.on('click', this.event.openSearch);
+	    this.element.searchLinkClose.on('click', this.event.closeSearch);
+	    this.element.profileLink.on('click', this.event.toggleProfileMenu);
+	    this.element.document.on('click', 'html', this.event.globalCloseProfileMenu);
+	  }
+
+	  Button.prototype.element = {
+	    searchForm: $('#search-form'),
+	    searchInput: $('#search-input'),
+	    searchLink: $('#search-link'),
+	    searchLinkClose: $('#search-link-close'),
+	    profileLink: $('#profile-link'),
+	    document: $(document)
+	  };
+
+	  Button.prototype.event = {
+	    openSearch: function(e) {
+	      e.preventDefault();
+	      Button.prototype.element.searchForm.show('blind', {
+	        direction: 'up'
+	      }, 200);
+	      Button.prototype.searchLinkClose.rotate({
+	        angle: -60,
+	        animateTo: 0
+	      });
+	      return this.element.searchInput.focus();
+	    },
+	    closeSearch: function(e) {
+	      e.preventDefault();
+	      Button.prototype.searchForm.hide('blind', {
+	        direction: 'up'
+	      }, 200);
+	      return Button.prototype.searchLinkClose.rotate({
+	        angle: 0,
+	        animateTo: -60
+	      });
+	    },
+	    toggleProfileMenu: function(e) {
+	      var $arrow, $menu, $this;
+	      $this = $(this);
+	      $menu = $this.children('.profile-menu');
+	      $arrow = $this.find('.fa.fa-angle-down');
+	      if ($menu.is(':visible')) {
+	        $arrow.rotate({
+	          animateTo: 0
+	        });
+	      } else {
+	        $arrow.rotate({
+	          animateTo: -180
+	        });
+	      }
+	      $menu.stop(false, false);
+	      return $menu.toggle("drop", {
+	        direction: 'up'
+	      }, 200);
+	    },
+	    globalCloseProfileMenu: function(e) {
+	      var $arrow, $profileMenu;
+	      if (!$(e.target).closest("#profile-link").length) {
+	        $profileMenu = $('.profile-menu');
+	        $arrow = $profileMenu.parent().find('.fa.fa-angle-down');
+	        $arrow.rotate({
+	          animateTo: 0
+	        });
+	        return $profileMenu.hide('drop', {
+	          direction: 'up'
+	        }, 200);
+	      }
+	    }
+	  };
+
+	  return Button;
+
+	})();
+
+	module.exports = Button;
 
 
 /***/ }
