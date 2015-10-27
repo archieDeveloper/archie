@@ -46,6 +46,9 @@
     "coffee-script": "~1.10.0",
     "webpack": "~1.12.2",
     "gulp-util": "~3.0.7",
-    "coffee-loader": "~0.7.2"
+    "coffee-loader": "~0.7.2",
+    "should": "~7.1.1",
+    "mocha": "~2.3.3",
+    "supertest": "~1.1.0"
   }
 }
