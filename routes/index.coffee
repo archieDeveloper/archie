@@ -1,7 +1,7 @@
 express = require 'express'
 router = do express.Router
 nconf = require 'nconf'
-config = nconf.argv().env().file file: './configs/config.json'
+config = nconf.argv().env().file file: './config.json'
 ModelMenu = require '../models/menu'
 
 # GET home page.
