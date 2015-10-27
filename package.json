@@ -4,7 +4,8 @@
   "description": "archie blog",
   "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "NODE_PATH=. nodemon ./bin/www.coffee",
+    "gulp": "gulp --require coffee-script/register"
   },
   "keywords": [
     "archie",
@@ -18,7 +19,7 @@
     "nodejs",
     "javascript"
   ],
-  "author": "archie",
+  "author": "Arkady Kozhedub <arkadij.ok@gmail.com>",
   "license": "BSD-2-Clause",
   "dependencies": {
     "winston": "~1.0.1",
